@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Когнитивный диссонанс</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Когнитивный диссонанс" />
+    <meta property="og:site_name" content="Когнитивный диссонанс" />
+    <meta property="og:description" content="Аутист всосал 3 интервью подряд" />
+    <meta property="og:image" content="111" />
+    <style>
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+        }
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            /* color: #f1f1f1; */
+            width: 100%;
+            padding: 20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .center-screen {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .main-message {
+            font-size: 3em;
+        }
+
+        .main-message b {
+            padding: 1em;
+            font-size: 1.5em;
+            color: red;
+        }
+
+        /*http://lea.verou.me/2012/02/moving-an-element-along-a-circle/*/
+        @keyframes rot {
+            from {
+                transform: rotate(0deg) translateY(10vh) translateX(10vw) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg) translateY(10vh) translateX(10vw) rotate(-360deg);
+            }
+        }
+
+        .smile_wrap{
+            position: absolute;
+            top: 50vh;
+            left: 50vw;
+            font-size: 100px;
+        }
+        .smile {
+            margin-top: -50%;
+            margin-left: -50%;
+            animation: rot 5s infinite linear;
+        }
+        /* .smile {
+            position: absolute;
+            top: 50vh;
+            left: 50vw;
+            font-size: 100px;
+            animation: rot 3s infinite linear;
+            /* transform:
+                rotate(270deg) translate(150px) rotate(-270deg); */
+        /* } */
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./videoplayback.webm" type="video/webm">
+    </video>
+    <div class="content">
+        <div class="center-screen main-message">
+            Аутист всосал <b>3</b> интервью подряд
+        </div>
+        <div class="smile_wrap">
+            <div class="smile">
+                <img src="./drone.png"/>
+                <!-- <div class="smile_content">
+                    Фото коптера
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
